@@ -23,7 +23,7 @@ public class EntryPoint {
         }
 
         Path blorpFile = Paths.get(args[0]);
-        if (!Files.exists(blorpFile)) {
+        if (!Files.exists(blorpFile) || !args[0].endsWith(".blorp")) {
             System.out.printf("Please a valid path to a .blorp code file. You specified path '%s'.\n", blorpFile);
             return;
         }
